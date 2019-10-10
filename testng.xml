@@ -3,7 +3,7 @@
 <suite name="Suite" parallel="methods">
   <test name="Test">
     <classes>
-      <class name="com.eTools.testcases.FAMUnicefWorkFlowTest"/>
+      <class name="com.eTools.testcases.ActionPoints_WorkFlowTest"/>
     </classes>
   </test> <!-- Test -->
 </suite> <!-- Suite -->

@@ -18,6 +18,8 @@ import org.openqa.selenium.remote.DesiredCapabilities;
 
 import com.eTools.util.TestUtil;
 
+import io.github.bonigarcia.wdm.WebDriverManager;
+
 public class TestBase {
 	
 	public static WebDriver driver; 
@@ -41,9 +43,21 @@ public class TestBase {
 		//
 			
 			if(browsername.equals("chrome")){
-				System.setProperty("webdriver.chrome.driver", System.getProperty("user.dir")+ "/src/test/resources/Driver/chromedriver.exe");	
+		//		System.setProperty("webdriver.chrome.driver", System.getProperty("user.dir")+ "/src/test/resources/Driver/chromedriver.exe");
+				//WebDriver driver = null;
+		//		 WebDriverManager.chromedriver().setup();
+				WebDriverManager.chromedriver().version("77.0.3865.40").setup();
+			//	ChromeOptions options = new ChromeOptions();
+			//	options.addArguments("start-maximized"); 
+			//	options.addArguments("enable-automation"); 
+		//		options.addArguments("--no-sandbox"); 
+		//		options.addArguments("--disable-infobars");
+		//		options.addArguments("--disable-dev-shm-usage");
+		//		options.addArguments("--disable-browser-side-navigation"); 
+		//		options.addArguments("--disable-gpu"); 
+			//	driver = new ChromeDriver(options); 
 				driver = new ChromeDriver(); 
-				
+			//	driver.get(prop.getProperty("url"));
 			}
 			else if (browsername.equals("incognito"))
 			{
@@ -52,12 +66,12 @@ public class TestBase {
 				driver = new ChromeDriver(); 
 				
 				ChromeOptions options = new ChromeOptions();
-				options.addArguments("--incognito");
+		//		options.addArguments("--incognito");
 				DesiredCapabilities capabilities = DesiredCapabilities.chrome();
-				capabilities.setCapability(ChromeOptions.CAPABILITY, options);
+		//		capabilities.setCapability(ChromeOptions.CAPABILITY, options);
 				System.setProperty("webdriver.chrome.driver", System.getProperty("user.dir")+ "/src/test/resources/Driver/chromedriver.exe");	
 				 driver = new ChromeDriver(capabilities);
-					
+				//	driver.get(prop.getProperty("url"));
 			}
 			driver.manage().window().maximize();
 			driver.manage().deleteAllCookies();
@@ -96,8 +110,6 @@ public class TestBase {
 		}
 		
 
-	
-	
 	
 // returns the shadow element. If you have one shadowroot, will return shadowroot. One shadow root
 	public WebElement expandRootElement(WebElement element,WebDriver driver ) {
