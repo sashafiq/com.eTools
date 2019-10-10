@@ -19,8 +19,8 @@ public class GridPage extends TestBase {
 	//css path for FAM link
 	private String famLink= "#selector > div > div.app-outer > div > div:nth-child(4) > div > a:nth-child(1) > paper-icon-button";
 	
-	private String actionpointlink= "#selector > div > div.app-outer > div > div:nth-child(6) > div > a:nth-child(2) > div";
-	
+	//private String actionpointlink= "#selector > div > div.app-outer > div > div:nth-child(6) > div > a:nth-child(2) > div";
+	private String actionpointlink="#selector > div > div > div:nth-child(7) > a:nth-child(1) > div";
 		public GridPage() throws InterruptedException{
 	///		PageFactory.initElements(driver, this);
 			//super();
