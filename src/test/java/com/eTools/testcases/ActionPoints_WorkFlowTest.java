@@ -65,6 +65,7 @@ public ActionPoints_WorkFlowTest() throws IOException{
 super();
 }
 
+//implemented extent report
 
 @BeforeTest
 //Initialize the Input Test data and also HTML Report
