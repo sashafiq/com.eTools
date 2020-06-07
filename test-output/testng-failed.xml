@@ -3,14 +3,16 @@
 <suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="com.eTools.testcases.ActionPoints_WorkFlowTest">
+      <class name="com.eTools.testcases.FAM_WorkFlow_AuditTest">
         <methods>
-          <include name="createActionPointsTest" invocation-numbers="0"/>
+          <include name="createEngagementTest" invocation-numbers="0"/>
           <include name="setUp"/>
+          <include name="FinalizeEngagementTest" invocation-numbers="0"/>
+          <include name="completeAuditTest"/>
           <include name="LoginTest" invocation-numbers="0"/>
-          <include name="endTest"/>
+          <include name="tearDown"/>
         </methods>
-      </class> <!-- com.eTools.testcases.ActionPoints_WorkFlowTest -->
+      </class> <!-- com.eTools.testcases.FAM_WorkFlow_AuditTest -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

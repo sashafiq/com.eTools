@@ -16,7 +16,7 @@ import org.openqa.selenium.support.PageFactory;
 
 import com.eTools.base.TestBase;
 
-public class AddNewEngagementPage extends TestBase {
+public class AddNewAssessmentPage extends TestBase {
 
 
 private String[] addnewengagementshadow = {"app-shell","engagements-page-main","engagements-list-view","pages-header-element"};
@@ -27,7 +27,7 @@ private String addnewengagementbtn="div > div > div > paper-button.add-btn > a";
 private String[] purchaseordershadow = {"app-shell","engagements-page-main","new-engagement-view","engagement-info-details","paper-input"};    
 //private String purchaseordernametxt="#input";
 // private String purchaseordernametxt="#purchaseOrder";
-private String purchaseordernametxt="#input-7 > input";
+private String purchaseordernametxt="#input-6 > input";
 //private String[] poitemshadow = {"app-shell","engagements-page-main","new-engagement-view","engagement-info-details","etools-searchable-multiselection-menu","paper-icon-button"};    
 // private String poitemdrp="#icon";
 private String[] poitemshadow = {"app-shell","engagements-page-main","new-engagement-view","engagement-info-details","etools-dropdown"};
@@ -45,12 +45,11 @@ private String[] totalvalueshadow = {"app-shell","engagements-page-main","new-en
 private String[] addstaffcheckboxshadow = {"app-shell","engagements-page-main","new-engagement-view","engagement-staff-members-tab"};    
 
 
-private String totalvaluetext="#input-32 > input";
+private String totalvaluetext="#input-31 > input";
 private String addstaffcheckbox="etools-content-panel > div.panel-content.group > list-element:nth-child(4) > div.checkbox > paper-checkbox";
 
 
-private String[] clickcreatebtnshadow = {"app-shell","#engagements","#creationPage","#sidebar > status-tab-element","etools-content-panel > div.status-buttons > action-buttons"};
-
+private String[] clickcreatebtnshadow = {"app-shell","#engagements","#creationPage","#sidebar > status-tab-element","etools-content-panel > div.status-buttons > action-buttons"};    
 private String createbtn="paper-button";
 
 private String[] engagementtitleshadow = {"app-shell","audits-page-main","pages-header-element"};    
@@ -60,7 +59,7 @@ private String[] engagementtitlemicroshadow = {"app-shell","micro-assessments-pa
 String [] engagementtypeshadow={"app-shell","engagements-page-main","new-engagement-view","engagement-info-details","etools-dropdown"};    
 
 
-private String[] engagementtitlespotcheckshadow={"app-shell","#spot-checks","pages-header-element"};
+private String[] engagementtitlespotcheckshadow={"app-shell","spot-checks-page-main","pages-header-element"};
 
 private String[] engagementtitlespecilauditshadow={"app-shell","special-audits-page-main","pages-header-element"};
 //#engagementType
@@ -98,7 +97,7 @@ private String partnerdetailsdrp="#main > iron-icon";
 private String [] partnerdetailssvaluehadow={"app-shell","engagements-page-main","new-engagement-view","partner-details-tab","#partner"};
 private String partnerdetailssvaluedrp="#dropdownMenu > div > div.list-wrapper > paper-listbox > paper-item:nth-child(1) > span";
 
-public AddNewEngagementPage() throws InterruptedException
+public AddNewAssessmentPage() throws InterruptedException
 {
 Thread.sleep(2000);
 }
@@ -221,15 +220,13 @@ act.sendKeys(Keys.TAB).perform();
 act.sendKeys(Keys.ENTER).perform();
 Thread.sleep(1000);
 //Add staff team members
-
 String[] auditstaffshadow={"app-shell","#engagements","#creationPage","#staffMembers"};
-String auditstaff="etools-content-panel > div.panel-content.group > list-element:nth-child(3) > div.checkbox > paper-checkbox";
-
+String auditstaff="etools-content-panel > div.panel-content.group > list-element:nth-child(11) > div.checkbox > paper-checkbox";
 // Focus on  hr_staffm-38@yahoo
 js.executeScript("arguments[0].scrollIntoView();", getShadowElement(auditstaffshadow, driver,auditstaff));
 //Click on Staff -  hr_staffm-38@yahoo.com
 getShadowElement(auditstaffshadow, driver,auditstaff).click();
-      Thread.sleep(2000);
+      Thread.sleep(1000);
      // Focus on Create Button
 js.executeScript("arguments[0].scrollIntoView();", getShadowElement(clickcreatebtnshadow, driver,createbtn));
 Thread.sleep(1000);
@@ -290,8 +287,7 @@ act.sendKeys(Keys.ENTER).perform();
 Thread.sleep(1000);
 //Add staff team members
 String[] auditstaffshadow={"app-shell","#engagements","#creationPage","#staffMembers"};
-
-String auditstaff="etools-content-panel > div.panel-content.group > list-element:nth-child(3) > div.checkbox > paper-checkbox";
+String auditstaff="etools-content-panel > div.panel-content.group > list-element:nth-child(11) > div.checkbox > paper-checkbox";
    js.executeScript("arguments[0].scrollIntoView();", getShadowElement(auditstaffshadow, driver,auditstaff));
 // Select  hr_staffm-38@yahoo Audit staff checkbox
    getShadowElement(auditstaffshadow, driver,auditstaff).click();
@@ -389,8 +385,7 @@ String specificprocedurebtn="etools-content-panel > div > div > paper-icon-butto
 getShadowElement(specificprocedureshadow, driver,specificprocedurebtn).click();
 Thread.sleep(1000);
 // Enter text in Description
-String[] descriptionshadow={"app-shell","#engagements","#creationPage","#specificProcedures","etools-dialog:nth-child(4) > div > div > div > div > paper-textarea","#input-36"};
-
+String[] descriptionshadow={"app-shell","#engagements","#creationPage","#specificProcedures","etools-dialog:nth-child(4) > div > div > div > div > paper-textarea","#input-33"};
 String descriptiontext="#textarea";
 getShadowElement(descriptionshadow, driver,descriptiontext).clear();
 getShadowElement(descriptionshadow, driver,descriptiontext).sendKeys("Test");
@@ -403,8 +398,7 @@ getShadowElement(addbuttomshadow, driver,addbutton).click();
 Thread.sleep(2000);
 //Add staff team members
 String[] auditstaffshadow={"app-shell","#engagements","#creationPage","#staffMembers"};
-String auditstaff="etools-content-panel > div.panel-content.group > list-element:nth-child(3) > div.checkbox > paper-checkbox";
-
+String auditstaff="etools-content-panel > div.panel-content.group > list-element:nth-child(11) > div.checkbox > paper-checkbox";
 js.executeScript("arguments[0].scrollIntoView();", getShadowElement(auditstaffshadow, driver,auditstaff));
 getShadowElement(auditstaffshadow, driver,auditstaff).click();
    Thread.sleep(1000);
@@ -523,9 +517,7 @@ act.sendKeys(Keys.ENTER).perform();
 Thread.sleep(1000);
 //Add staff team members
 String[] auditstaffshadow={"app-shell","#engagements","#creationPage","#staffMembers"};
-//String auditstaff="etools-content-panel > div.panel-content.group > list-element:nth-child(11) > div.checkbox > paper-checkbox";
-String auditstaff="etools-content-panel > div.panel-content.group > list-element:nth-child(3) > div.checkbox > paper-checkbox";
-
+String auditstaff="etools-content-panel > div.panel-content.group > list-element:nth-child(11) > div.checkbox > paper-checkbox";
 js.executeScript("arguments[0].scrollIntoView();", getShadowElement(auditstaffshadow, driver,auditstaff));
 getShadowElement(auditstaffshadow, driver,auditstaff).click();
     Thread.sleep(1000);
@@ -533,7 +525,8 @@ getShadowElement(auditstaffshadow, driver,auditstaff).click();
 js.executeScript("arguments[0].scrollIntoView();", getShadowElement(clickcreatebtnshadow, driver,createbtn));
 getShadowElement(clickcreatebtnshadow, driver,createbtn).click();
 Thread.sleep(5000);
-
+getShadowElement(clickcreatebtnshadow, driver,createbtn).click();
+Thread.sleep(5000);
 
 } catch (InterruptedException e) {
 

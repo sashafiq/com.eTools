@@ -17,32 +17,33 @@ import org.openqa.selenium.support.PageFactory;
 import com.eTools.base.TestBase;
 
 public class ActionPointsHomePage extends TestBase {
-	
 
-	private String addactionpointbtn="div > div > div > paper-button > a";
-	private String[] addactionpointbtnshadow = {"app-shell","action-points-page-main","action-points-list","pages-header-element"};		    
 
-	public ActionPointsHomePage() throws InterruptedException
-	{
-		Thread.sleep(2000);
-	}
-	
-	public void clickOnaddActionPoint() {
-		try {
-			
-			Thread.sleep(1000);
-			System.out.println("Click on add action point");
-			getShadowElement(addactionpointbtnshadow,driver,addactionpointbtn).click();;
-			Thread.sleep(4000);	
-			JavascriptExecutor js = (JavascriptExecutor) driver;
-			js.executeScript("window.scrollBy(0,5000)");
-			} catch (InterruptedException e) {
-			
-				e.printStackTrace();
-			}
-				
-		}
-	
+private String addactionpointbtn="div > div > div > paper-button > a";
+private String[] addactionpointbtnshadow = {"app-shell","#action-points","iron-pages > action-points-list","pages-header-element"};    
+
+public ActionPointsHomePage() throws InterruptedException
+{
+Thread.sleep(2000);
+}
+
+public void clickOnaddActionPoint() {
+try {
+
+Thread.sleep(1000);
+System.out.println("Click on add action point");
+getShadowElement(addactionpointbtnshadow,driver,addactionpointbtn).click();;
+Thread.sleep(4000);
+JavascriptExecutor js = (JavascriptExecutor) driver;
+js.executeScript("window.scrollBy(0,5000)");
+} catch (InterruptedException e) {
+
+e.printStackTrace();
+}
 
 }
+
+
+}
+
 

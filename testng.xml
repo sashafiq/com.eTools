@@ -3,7 +3,11 @@
 <suite name="Suite" parallel="methods">
   <test name="Test">
     <classes>
-      <class name="com.eTools.testcases.ActionPoints_WorkFlowTest"/>
+     <!-- <class name="com.eTools.testcases.ActionPoints_WorkFlowTest"/>-->
+     <!-- <class name="com.eTools.testcases.FAM_WorkFlow_AuditTest"/>-->
+       <class name="com.eTools.testcases.FAM_WorkFlow_SpecialAuditTest"/>
+      <!--  <class name="com.eTools.testcases.FAM_WorkFlow_MicroAssesmentTest"/> -->
+     <!-- <class name="com.eTools.testcases.FAM_WorkFlow_SpotCheckTest"/> -->
     </classes>
   </test> <!-- Test -->
 </suite> <!-- Suite -->
